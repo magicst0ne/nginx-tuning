@@ -3,7 +3,7 @@ NGINX Tuning For Best Performance
 Our goal is that find a way improve the server's QPS.
 
 ## Testing Overview
-All tests were done using three separate machines connected together with dual 1 GbE links in a simple, flat Layer 2 network.
+All tests were done using three separate machines connected together with 1 GbE links in a simple, flat Layer 2 network.
 To generate traffic from the client machine, we used a performance testing tool. 
 
 
