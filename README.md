@@ -24,9 +24,11 @@ The settings in modern Linux kernels (5.4.0-99-generic) are suitable for most pu
 **The Backlog Queue**
 - net.core.somaxconn = 4096
 - net.core.netdev_max_backlog = 1024
+
 **File Descriptors**
 - sys.fs.file-max – The system‑wide limit for file descriptors
 - nofile – The user file descriptor limit, set in the /etc/security/limits.conf file
+
 **Ephemeral Ports**
 - net.ipv4.ip_local_port_range = 32768 59000
 
@@ -34,10 +36,13 @@ The settings in modern Linux kernels (5.4.0-99-generic) are suitable for most pu
 **Worker Processes**
 - worker_processes auto;
 - worker_connections 10240;
+
 **Keepalive Connections**
 - keepalive_timeout 65;
+
 **Access Logging**
 - access_log off; 
+
 **Sendfile**
 - sendfile on;
 
