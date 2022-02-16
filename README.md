@@ -21,3 +21,7 @@ go-stress-testing
 - Ubuntu 20.04.3 LTS ran on both client and web server machines.
 
 ## Performance Metrics and Analysis
+|  Request Sizes | Rps	 | CPU Usage	 | Traffic	 |
+| :----:| ----: | ----: | ----: |
+| 0.6 KB | 106165 | 100% | 821Mb/s |
+| 1.2 KB | 74967 | 85.2% | 985Mb/s |
