@@ -18,6 +18,13 @@ To generate traffic from the client machine, we used a performance testing tool.
 - Version 4.2.0 of wrk running on the client machine generated the traffic that NGINX proxied. We installed it according to these instructions.
 - Version 1.18.0 of NGINX Open Source ran on the web server machines. We installed it from the official package repository of Ubuntu according to these instructions.
 - Ubuntu 20.04.3 LTS ran on both client and web server machines.
+- 
+## Tuning Your NGINX Configuration
+Worker Processes
+Keepalive Connections
+Access Logging
+Sendfile
+Limits
 
 ## Performance Metrics and Analysis
 RPS for HTTP Requests
