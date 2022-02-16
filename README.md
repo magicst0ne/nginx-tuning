@@ -15,12 +15,13 @@ To generate traffic from the client machine, we used a performance testing tool.
 
 ## Software Used
 **We used the following software for the testing:**
-go-stress-testing
 - Version 4.2.0 of wrk running on the client machine generated the traffic that NGINX proxied. We installed it according to these instructions.
 - Version 1.18.0 of NGINX Open Source ran on the web server machines. We installed it from the official package repository of Ubuntu according to these instructions.
 - Ubuntu 20.04.3 LTS ran on both client and web server machines.
 
 ## Performance Metrics and Analysis
+RPS for HTTP Requests
+The table and graph below show the number of HTTP requests for varying request sizes, in kilobytes (KB).
 |  Request Sizes | RPS	 | CPU Usage	 | Traffic	 |
 | :----:| ----: | ----: | ----: |
 | 0.6 KB | 106165 | 100% | 821Mb/s |
