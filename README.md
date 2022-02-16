@@ -18,13 +18,28 @@ To generate traffic from the client machine, we used a performance testing tool.
 - Version 4.2.0 of wrk running on the client machine generated the traffic that NGINX proxied. We installed it according to these instructions.
 - Version 1.18.0 of NGINX Open Source ran on the web server machines. We installed it from the official package repository of Ubuntu according to these instructions.
 - Ubuntu 20.04.3 LTS ran on both client and web server machines.
-- 
+
+## Tuning Your Linux Configuration
+The settings in modern Linux kernels (5.4.0-99-generic) are suitable for most purposes, but changing some of them can be beneficial. Check the kernel log for error messages indicating that a setting is too low, and adjust it as advised. Here we cover only those settings that are most likely to benefit from tuning under normal workloads. For details on adjusting these settings, please refer to your Linux documentation.
+**The Backlog Queue**
+- net.core.somaxconn = 4096
+- net.core.netdev_max_backlog = 1024
+**File Descriptors**
+- sys.fs.file-max – The system‑wide limit for file descriptors
+- nofile – The user file descriptor limit, set in the /etc/security/limits.conf file
+**Ephemeral Ports**
+- net.ipv4.ip_local_port_range = 32768 59000
+
 ## Tuning Your NGINX Configuration
-Worker Processes
-Keepalive Connections
-Access Logging
-Sendfile
-Limits
+**Worker Processes**
+- worker_processes auto;
+- worker_connections 10240;
+**Keepalive Connections**
+- keepalive_timeout 65;
+**Access Logging**
+- access_log off; 
+**Sendfile**
+- sendfile on;
 
 ## Performance Metrics and Analysis
 RPS for HTTP Requests
